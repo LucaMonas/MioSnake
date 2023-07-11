@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 325622055}
-  snake: {fileID: 0}
+  lifeManager: {fileID: 0}
 --- !u!1 &325622053
 GameObject:
   m_ObjectHideFlags: 0

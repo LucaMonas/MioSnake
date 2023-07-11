@@ -3,7 +3,8 @@ using UnityEngine;
 public class PlayerCollideManager : MonoBehaviour
 {
     [SerializeField] ScoreManager scoreManager;
-    [SerializeField] Snake snake;
+    //[SerializeField] Snake snake;
+    [SerializeField] LifeManager lifeManager;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -14,6 +15,8 @@ public class PlayerCollideManager : MonoBehaviour
             Destroy(gameObject);
 
             scoreManager.ResetPoint();
+
+            
         }
     }
 
@@ -27,6 +30,8 @@ public class PlayerCollideManager : MonoBehaviour
         }
         else
         {
+            Debug.Log("Less Point" + other.gameObject.name);
+
             scoreManager.ResetPoint();
         }
     }
